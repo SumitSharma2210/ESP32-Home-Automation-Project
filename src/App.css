@@ -27,20 +27,9 @@ body {
   padding: 20px;
 }
 
-.header-content {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.header-image {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-}
-
 h1 {
   font-size: 3rem;
-  margin: 0;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -66,18 +55,22 @@ h2 {
 }
 
 .alarm-section {
-  width: 45%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sensor-section {
-  width: 45%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.alarm-container,
 .sensor-readings {
-  width: 100%;
-  font-size: 1.8rem;
-  padding: 30px;
-  max-width: 600px;
+  margin: 20px;
 }
 
 .alarm-setter,
@@ -115,23 +108,40 @@ button:hover {
   background-color: #21a1f1;
 }
 
-@media (max-width: 600px) {
-  .header-content {
+.sensor-readings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .container {
     flex-direction: column;
-    align-items: center;
   }
 
-  .header-image {
-    width: 80%;
+  .alarm-section,
+  .sensor-section {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
   }
 
   .card {
     width: 90%;
-  }
-
-  .sensor-readings {
-    font-size: 1.5rem;
-    padding: 20px;
   }
 
   label {
@@ -144,11 +154,7 @@ button:hover {
   }
 }
 
-@media (max-width: 400px) {
-  .header-image {
-    width: 100%;
-  }
-
+@media (max-width: 480px) {
   h1 {
     font-size: 2rem;
   }
@@ -166,11 +172,6 @@ button:hover {
     width: 95%;
   }
 
-  .sensor-readings {
-    font-size: 1.2rem;
-    padding: 15px;
-  }
-
   label {
     font-size: 0.9rem;
   }
@@ -178,5 +179,33 @@ button:hover {
   input {
     font-size: 0.8rem;
     padding: 3px;
+  }
+}
+
+@media (max-width: 360px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  label {
+    font-size: 0.8rem;
+  }
+
+  input {
+    font-size: 0.7rem;
+    padding: 2px;
   }
 }

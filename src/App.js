@@ -106,8 +106,7 @@ const App = () => {
           <div className="sensor-section">
             <div className="card sensor-readings">
               <h2>
-                Temperature: {formattedTemperature} °C{" "}
-                {/* Change applied here */}
+                Temperature: {formattedTemperature} °C {}
               </h2>
               <h2>Humidity: {humidity ? `${humidity} %` : "Loading..."}</h2>
             </div>
