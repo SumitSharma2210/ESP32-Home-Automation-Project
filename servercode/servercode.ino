@@ -37,7 +37,7 @@ void setup() {
   pinMode(roomPin, OUTPUT);
   pinMode(LED_BUILTIN, OUTPUT);
 
-  // Ensure the relay (roomPin) is initially off
+  
   digitalWrite(roomPin, LOW);
 
   Serial.begin(115200);
